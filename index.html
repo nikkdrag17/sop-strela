@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Студенческий отряд проводников «Стрела»</title>
+<meta name="description" content="Вступить в СОП «Стрела» СПб: работа проводником в РЖД для студентов. Студенческий отряд Санкт-Петербург!">
+<meta property="og:title" content="Студенческий отряд проводников «Стрела»">
+<meta property="og:description" content="Вступить в СОП «Стрела» СПб: работа проводником в РЖД для студентов. Студенческий отряд Санкт-Петербург!">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://static.tildacdn.pub/tild3363-3462-4533-b562-383133303065/YtwJeOpLIHQ_IWz9HIcS.jpg">
+<!--
+  Страница собрана из кода Тильды (strelasop.tilda.ws) в обычный HTML/CSS/JS, без библиотек Тильды.
+  Фотографии подгружаются с серверов Тильды (static.tildacdn.pub). Если проект на Тильде удалят,
+  скачайте фото и замените адреса в атрибутах src на свои.
+  Шрифт TildaSans заменён на PT Sans (похож по ширине), огромные слова «СТРЕЛА» набраны Inter Black.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#192d4e; --light:#edfbfb; --cream:#f7f1e8; --gray:#6e6364; --beige:#ede8e0; --dash:#393939;
+  --text:'PT Sans', Arial, sans-serif;
+  --display:'Inter', 'PT Sans', Arial, sans-serif;
+  --num:Arial, 'Liberation Sans', Helvetica, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--navy);font-family:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+img{display:block}
+section{position:relative;scroll-margin-top:50px}
+.wrap{width:1200px;margin:0 auto;position:relative}
+
+/* ---------- Меню: выезжает после прокрутки на 400px ---------- */
+.topbar{position:fixed;top:0;left:0;right:0;height:50px;background:var(--navy);z-index:990;transform:translateY(-100%);transition:transform .15s}
+.topbar.show{transform:none}
+.topbar nav{width:1200px;max-width:100%;height:100%;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.topbar a{color:var(--light);text-decoration:none;font:700 25px/1.55 var(--text)}
+.topbar a:nth-child(2){justify-self:center}
+.topbar a:nth-child(3){justify-self:end}
+.topbar a:hover{opacity:.8}
+
+/* ---------- Первый экран ---------- */
+.hero{height:800px;overflow:hidden;background:#fff linear-gradient(0turn,#f9f6f2 0%,rgba(168,186,206,.45) 72%,#192d4e 100%)}
+.stage{position:absolute;left:50%;top:0;width:1200px;height:800px;margin-left:-600px}
+.stage>*{position:absolute;margin:0}
+.h-circle{top:32px;left:720px;width:629px;height:629px;z-index:3;transform:rotate(357deg)}
+.spin{width:100%;height:100%;animation:spin 3s linear infinite}
+.spin svg{display:block;width:100%;height:100%}
+@keyframes spin{to{transform:rotate(-360deg)}}
+.h-word{top:195px;left:15px;width:1155px;z-index:4;color:var(--navy);font:900 180px/1.5 var(--display);text-transform:uppercase;white-space:nowrap}
+.h-band{top:661px;left:-2000px;right:-2000px;height:2000px;background:var(--navy);z-index:6}
+.h-art{top:61px;left:820px;width:434px;height:auto;z-index:7}
+.h-title{top:133px;left:20px;width:1010px;z-index:8;font:700 55px/1.55 var(--text)}
+
+/* ---------- Полоса с большими словами «СТРЕЛА» ---------- */
+.strela{height:550px;overflow:hidden;background:#fdffff}
+.strela .stage{height:100%}
+.s-word{color:var(--gray);font-family:var(--display);font-weight:900;text-transform:uppercase;white-space:nowrap;z-index:3}
+.s-w1{top:-243px;left:0;width:1040px;font-size:252px;line-height:1.6}
+.s-w2{top:160px;left:-1172px;width:2352px;font-size:320px;line-height:1.6}
+.s-band{top:0;left:-2000px;right:-2000px;height:57px;background:var(--navy);z-index:3}
+
+/* ---------- Как к нам попасть: карточки ---------- */
+.how{background:#fdffff;padding-bottom:21px}
+.intro{padding-left:20px;font:italic 700 40px/1.4 var(--text);letter-spacing:.5px;max-width:1187px}
+.how-title{text-align:center;font:700 60px/1.55 var(--text);margin:-12px 0 -15px}
+.cards{list-style:none;margin:0 auto;padding:0 0 3px 3px;width:min(1268px,100%);display:grid;grid-template-columns:repeat(4,1fr)}
+.card{border:3px solid #000;margin:0 0 -3px -3px;min-height:529px;padding:0 32px 38px;display:flex;flex-direction:column;align-items:center}
+.num{display:block;height:85px;font:700 70px/1.55 var(--num);color:var(--navy)}
+.dash{width:45px;height:3px;background:var(--dash);flex:none}
+.card h3{margin:2px -10px 0;min-height:56px;font:700 18px/1.55 var(--text);text-align:center}
+.card p{align-self:stretch;margin-top:9px;font-size:16px;line-height:1.55}
+.card.c6 h3{margin-left:-30px;margin-right:-30px}
+.card .note{margin-top:7px;font-size:13px;font-style:italic}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;font:700 14px/1.55 var(--text);text-decoration:none;transition:opacity .2s}
+.btn:hover{opacity:.85}
+.card .btn{margin-top:auto;width:229px;height:36px;flex:none}
+.card .btn.hq{width:200px;height:47px;margin-top:11px}
+.steps{background:linear-gradient(0turn,#f2ffff 0%,#fdffff 98%);padding:5px 0 20px}
+.steps .card{min-height:535px}
+.steps .num{margin-top:-15px}
+.steps .card p{margin-top:4px}
+.steps .card.c7{padding-bottom:13px}
+
+.ticker{height:72px;margin-top:18px;background:var(--navy);overflow:hidden;display:flex;align-items:center}
+.ticker-track{display:flex;flex:none;animation:marquee 16s linear infinite}
+.ticker span{flex:none;text-align:center;white-space:nowrap;color:var(--light);font:700 30px/1.55 var(--text)}
+.ticker .a{width:166px}
+.ticker .b{width:316px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- О нас ---------- */
+.about{background:radial-gradient(circle at center,#7194bc 0%,#f2ffff 84%)}
+.about-grid{display:grid;grid-template-columns:570px 542px;column-gap:60px;padding-left:50px}
+.about-text{display:flex;flex-direction:column;justify-content:space-between;padding:20px 0 67px}
+.about-title{font:700 60px/1.55 var(--text);margin-bottom:27px}
+.sub h3{font:700 30px/1.55 var(--text);margin:0 -43px 3px 0}
+.sub p{font-size:20px;line-height:1.55}
+.sub ul{margin:0;padding-left:1.4em}
+.sub .btn{width:200px;height:55px;margin:4px 0 0 130px}
+.collage{position:relative;height:2760px}
+.collage img{position:absolute;top:var(--t);left:var(--l);width:var(--w);height:auto;background:#c9d2dc}
+
+/* ---------- Зачем нужен отряд ---------- */
+.why{background:var(--beige) linear-gradient(0turn,rgba(25,45,78,.88) 0%,rgba(102,120,141,.77) 47%,rgba(237,251,251,.7) 74%,#edfbfb 90%);overflow-x:clip}
+.why-grid{display:flex;gap:30px;padding:50px 0 49px}
+.why-left{width:600px;flex:none}
+.why-right{width:570px}
+.strip{position:relative;width:680px;height:1345px;margin:-87px 0 0 -120px}
+.strip .film{position:absolute;top:30px;left:112px;width:456px;height:1281px;background:#fff;transform:rotate(10deg);box-shadow:40px -7px 30px 0 rgba(177,179,181,.6)}
+.strip img{position:absolute;top:var(--t);left:var(--l);width:393px;height:295px;object-fit:cover;transform:rotate(10deg);background:#c9d2dc}
+.slider{position:relative;width:600px;height:400px;margin:25px 0 0 -31px;overflow:hidden;background:#c9d2dc}
+.track{display:flex;height:100%;transition:transform .8s ease}
+.track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover}
+.arr{position:absolute;top:50%;width:30px;height:30px;margin-top:-15px;padding:0;border:0;border-radius:50%;background:#e8e8e8;cursor:pointer;display:grid;place-items:center}
+.arr svg{width:8px;height:14px}
+.arr.prev{left:20px}
+.arr.next{right:20px}
+.why h2{font:700 60px/1.55 var(--text);letter-spacing:.5px}
+.why .lead{max-width:512px;font:700 20px/1.55 var(--text);letter-spacing:.5px}
+.why h3{margin-top:30px;font:700 20px/1.35 var(--text);letter-spacing:.5px}
+.why .b1 h3{margin-top:25px}
+.why .blk p{margin-top:3px;font-size:18px;line-height:1.55;letter-spacing:.5px}
+.why .b1 p{line-height:1.35}
+.why .b2,.why .b3{color:var(--light)}
+.why .b4,.why .b5{color:var(--cream)}
+.why .b5 p{letter-spacing:0}
+.grad{background:linear-gradient(0turn,#f7f1e8,#edfbfb);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- Появление при прокрутке ---------- */
+.js .reveal{opacity:0;transition:opacity var(--d,1s) ease var(--dl,0s),transform var(--d,1s) ease var(--dl,0s)}
+.js .from-left{transform:translateX(-100px)}
+.js .from-right{transform:translateX(100px)}
+.js .from-up{transform:translateY(100px)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- Ноутбуки 960–1199 ---------- */
+@media (max-width:1199px){
+  .topbar nav{padding:0 20px}
+  .hero{height:100vh;min-height:600px;background-color:var(--beige)}
+  .hero .stage{width:960px;margin-left:-480px;height:600px;top:calc(50% - 300px)}
+  .h-circle{top:28px;left:420px}
+  .h-word{top:184px;left:27px;width:879px;font-size:110px}
+  .h-band{top:449px}
+  .h-art{top:75px;left:539px;width:411px}
+  .h-title{top:28px;left:27px;width:830px;font-size:52px}
+  .strela{height:485px}
+  .strela .stage{width:960px;margin-left:-480px}
+  .s-w1{top:-77px;left:33px;width:830px;font-size:100px}
+  .s-w2{top:169px;left:-992px;width:830px;font-size:270px}
+  .wrap{width:auto;padding:0 30px}
+  .intro{padding:10px 0 0;font-size:30px}
+  .how-title{font-size:50px;margin:20px 0 10px}
+  .cards{grid-template-columns:repeat(2,1fr);width:calc(100% - 20px)}
+  .card,.steps .card{min-height:0;padding-top:10px}
+  .steps .num{margin-top:0}
+  .about-grid{grid-template-columns:1fr;padding:20px 30px 50px}
+  .about-text{justify-content:flex-start;gap:48px;padding:0}
+  .sub h3{margin-right:0}
+  .sub .btn{margin-left:0;margin-top:16px}
+  .collage{height:auto;columns:3;column-gap:10px;margin-top:48px}
+  .collage img{position:static;width:100%;margin-bottom:10px;break-inside:avoid}
+  .why-grid{flex-direction:column;align-items:center;padding:30px 30px 40px}
+  .why-left,.why-right{display:contents}
+  .why-head,.why-body{width:100%;max-width:620px}
+  .why-head{order:1}
+  .strip{order:2;margin:10px auto 0}
+  .why-body{order:3}
+  .slider{order:4;width:100%;max-width:620px;height:auto;aspect-ratio:3/2;margin:40px 0 0}
+}
+/* ---------- Планшеты 640–959 ---------- */
+@media (max-width:959px){
+  .hero{min-height:670px}
+  .hero .stage{width:640px;margin-left:-320px;height:670px;top:calc(50% - 335px)}
+  .h-circle{top:170px;left:230px;width:481px;height:481px}
+  .h-word{top:191px;left:19px;width:601px;font-size:70px}
+  .h-band{top:573px}
+  .h-art{top:204px;left:303px;width:330px}
+  .h-title{top:34px;left:19px;width:560px;font-size:55px}
+  .strela{height:405px}
+  .strela .stage{width:640px;margin-left:-320px}
+  .s-w1{top:-16px;left:10px;width:480px;font-size:54px}
+  .s-w2{top:168px;left:-631px;width:480px;font-size:173px}
+  .intro{font-size:20px}
+  .how-title{font-size:36px}
+  .why h2{font-size:54px}
+  .strip{zoom:.85}
+}
+/* ---------- Телефоны 480–639 ---------- */
+@media (max-width:639px){
+  .topbar a{font-size:20px}
+  .hero{min-height:530px}
+  .hero .stage{width:480px;margin-left:-240px;height:530px;top:calc(50% - 265px)}
+  .h-circle{top:205px;left:185px;width:319px;height:319px}
+  .h-word{top:198px;left:34px;width:460px;font-size:40px}
+  .h-band{top:441px}
+  .h-art{top:218px;left:238px;width:218px}
+  .h-title{top:65px;left:30px;width:380px;font-size:40px}
+  .strela{height:260px}
+  .strela .stage{width:480px;margin-left:-240px}
+  .s-w1{top:-19px;left:0;width:380px;font-size:62px}
+  .s-w2{top:116px;left:-365px;width:380px;font-size:115px}
+  .wrap{padding:0 20px}
+  .cards{grid-template-columns:1fr}
+  .card h3,.card.c6 h3{margin-left:0;margin-right:0;min-height:0}
+  .card p{margin-top:12px}
+  .about-grid{padding:20px 20px 40px}
+  .about-title{font-size:48px}
+  .sub h3{font-size:26px;line-height:1.3;margin-bottom:8px}
+  .sub p{font-size:18px}
+  .collage{columns:2}
+  .why-grid{padding:20px 20px 30px}
+  .why h2{font-size:44px;line-height:1.2}
+  .strip{zoom:.62}
+}
+/* ---------- Маленькие телефоны до 479 ---------- */
+@media (max-width:479px){
+  .topbar a{font-size:16px}
+  .topbar nav{padding:0 10px}
+  .hero{min-height:580px}
+  .hero .stage{width:320px;margin-left:-160px;height:580px;top:calc(50% - 290px)}
+  .h-circle{top:239px;left:0;width:320px;height:320px;transform:rotate(360deg)}
+  .h-word{top:162px;left:29px;width:262px;font-size:70px;line-height:1.1}
+  .h-art{top:271px;left:59px;width:202px}
+  .h-title{top:20px;left:20px;width:300px;font-size:40px;line-height:1.1}
+  .strela{height:230px}
+  .strela .stage{width:320px;margin-left:-160px}
+  .s-w1{top:15px;left:0;width:300px;font-size:47px;line-height:1.1}
+  .s-w2{top:140px;left:-241px;width:300px;font-size:85px;line-height:1.1}
+  .wrap{padding:0 15px}
+  .intro{font-size:20px}
+  .how-title{font-size:30px}
+  .ticker span{font-size:24px}
+  .ticker .a{width:130px}
+  .ticker .b{width:260px}
+  .about-grid{padding:15px 15px 30px}
+  .why-grid{padding:20px 15px 30px}
+  .why h2{font-size:40px}
+  .strip{zoom:.45}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .spin,.ticker-track{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .track{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar" id="topbar">
+  <nav>
+    <a href="#how">Как попасть?</a>
+    <a href="#about">О нас</a>
+    <a href="#why">Зачем нужен отряд?</a>
+  </nav>
+</header>
+
+<main>
+<!-- Первый экран -->
+<section class="hero" id="top">
+  <div class="stage">
+    <div class="h-circle" aria-hidden="true"><div class="spin">
+      <svg viewBox="0 0 318.96 318.96" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#6e6364" stroke-width="1.5">
+          <path d="M34.27 63.56 L31.93 35.22 L24.89 76.81 L65.40 52.52 Z" fill="#6e6364" stroke-width=".5"/>
+          <line x1="14.71" y1="96.53" x2="12.15" y2="66.92"/><line x1="43.67" y1="88.73" x2="14.71" y2="95.39"/>
+          <circle cx="159.48" cy="159.47" r="157.98"/>
+          <line x1="42.64" y1="92.09" x2="13.67" y2="98.75"/><line x1="12.66" y1="100.59" x2="10.12" y2="70.98"/>
+          <line x1="45.68" y1="85.42" x2="16.72" y2="92.09"/><line x1="16.72" y1="92.09" x2="14.18" y2="62.47"/>
+        </g>
+      </svg>
+    </div></div>
+    <div class="h-word" aria-hidden="true" data-sbs='{"1200":[433,220,1.76,400,0],"960":[415,106,2,400,0],"640":[452,269,2.5,400,0],"480":[340,179,2.5,400,0],"0":[340,179,2.5,400,0]}'>Стрела</div>
+    <div class="h-band"></div>
+    <img class="h-art" src="https://static.tildacdn.pub/tild3632-6333-4162-b935-376266303735/Frame_87_Traced.png" width="826" height="1109" alt="">
+    <h1 class="h-title reveal" style="--d:2.3s">Студенческий Отряд Проводников</h1>
+  </div>
+</section>
+
+<!-- Большие слова «СТРЕЛА», двигаются при прокрутке -->
+<section class="strela" aria-hidden="true">
+  <div class="stage">
+    <div class="s-word s-w1" data-sbs='{"1200":[133,221,1.27,1000,200],"960":[681,160,2.7,500,100],"640":[519,112,3.2,500,300],"480":[186,82,1.86,1000,500],"0":[122,50,1.8,500,100]}'>Стрела</div>
+    <div class="s-word s-w2" data-sbs='{"1200":[1083,8,1,1000,200],"960":[800,0,1,500,100],"640":[600,0,1,500,300],"480":[362,5,1,1000,500],"0":[200,0,1,500,100]}'>СтрелаСтрела</div>
+    <div class="s-band"></div>
+  </div>
+</section>
+
+<!-- Как к нам попасть? Шаги 1–4 -->
+<section class="how" id="how">
+  <div class="wrap">
+    <p class="intro"><em>Ищешь работу на лето с достойной оплатой, возможностью путешествовать, познакомиться с новыми городами и погреться на южном солнце? </em><br><strong><em>Тогда тебе к нам!</em></strong></p>
+    <h2 class="how-title reveal from-right" style="--d:1.2s;--dl:.1s">Как к нам попасть?</h2>
+  </div>
+  <ol class="cards">
+    <li class="card"><span class="num">1</span><span class="dash"></span>
+      <h3>Изучи информацию</h3>
+      <p>Начни с нашей группы и сайта. Особое внимание удели разделам «О нас» и «Зачем нужен отряд?». <br>Там ты найдешь подробную информацию о нашей деятельности, мероприятиях и классных фишках.</p></li>
+    <li class="card"><span class="num">2</span><span class="dash"></span>
+      <h3>Заполни анкету</h3>
+      <p>Это обязательный шаг, чтобы мы могли с тобой связаться и пригласить на ознакомительное собрание!<br>Если тебе кажется, что до лета еще далеко, и ты всё успеешь, то лучше подумай дважды — можешь легко пропустить сроки собеседований и не попасть к нам, так как запись на них будет открыта только тем, кто заполнил анкету.</p>
+      <a class="btn" href="https://vk.com/sop_strela_sop?ref=group_menu&amp;w=app5619682_-162848219" target="_blank" rel="noopener">Анкета</a></li>
+    <li class="card"><span class="num">3</span><span class="dash"></span>
+      <h3>Приди на ознакомительное собрание</h3>
+      <p>Ознакомительные собрания проходят в октябре и феврале. Узнай точные даты, они будут опубликованы в группе и придут всем, кто заполнил анкету. Это твоя возможность узнать больше о нас, задать интересующие тебя вопросы и познакомиться с будущими товарищами.</p></li>
+    <li class="card"><span class="num">4</span><span class="dash"></span>
+      <h3>Пройди собеседование</h3>
+      <p>Успешное прохождение собеседования откроет тебе возможность к дальнейшей отрядной жизни. Это не страшно, просто будь собой. Мы хотим быть уверены, что ты подходишь для нас, а мы — для тебя. <br>Примерные сроки — конец февраля. Если ты подашь заявку позже, то, увы, мы не сможем взять тебя в этом году.</p></li>
+  </ol>
+</section>
+
+<!-- Шаги 5–8 и бегущая строка -->
+<section class="steps">
+  <ol class="cards" start="5">
+    <li class="card"><span class="num">5</span><span class="dash"></span>
+      <h3>Подготовь пакет документов</h3>
+      <p>Для трудоустройства тебе потребуется подготовить необходимые документы, перечень которых будет обозначен командным составом. Лучше тщательно подготовить всё заранее, чтобы случайно не прийти на трудоустройство без паспорта!</p></li>
+    <li class="card c6"><span class="num">6</span><span class="dash"></span>
+      <h3>Пройди обучение ППВ (проводника пассажирского вагона 3&nbsp;разряда)</h3>
+      <p>После собеседования ты пройдешь обучение по нашей профессии в виде дистанционного курса от РЖД и очных обучающих встреч в стенах ЛЭТИ, где опытные бойцы отряда расскажут всю специфику работы. Обучение официальное и бесплатное, ты даже получишь корочку профподготовки! <br>Начинается в начале марта и проходит до мая, во внеучебное время.</p></li>
+    <li class="card c7"><span class="num">7</span><span class="dash"></span>
+      <h3>Пройди медкомиссию</h3>
+      <p>Медкомиссия — обязательное условие для всех кандидатов. Она бесплатная, занимает 2-3 дня и проходит в апреле.<br>Лучше всего обсудить свои серьезные заболевания, если такие есть, на ознакомительных собраниях.</p>
+      <p class="note">Например, чтобы пройти медкомиссию нужно иметь зрение +/- 3. Если ты не проходишь по этому критерию, то, увы, мы не сможем взять тебя.<br>Обрати внимание на другие отряды в нашем штабе:</p>
+      <a class="btn hq" href="https://vk.com/co_leti" target="_blank" rel="noopener">Штаб СО ЛЭТИ</a></li>
+    <li class="card"><span class="num">8</span><span class="dash"></span>
+      <h3>Погрузись в романтику железной дороги</h3>
+      <p>После успешного прохождения всех этапов ты станешь настоящим проводником! Готовься к ярким путешествиям, новым городам, захватывающим приключениям и, конечно же, к новым друзьям.<br>Если остались вопросы, пиши командиру, комиссару или коменданту — ссылки есть в контактах группы.</p></li>
+  </ol>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+</section>
+
+<!-- О нас -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="sub">
+        <h2 class="about-title">О нас</h2>
+        <h3>Мини-история отряда:</h3>
+        <p>Студенческий отряд проводников «Стрела» был основан в 1973 году в стенах «ЛЭТИ». Наши бойцы каждое лето работают проводниками в поездах дальнего следования. <br>За годы существования наши бойцы объездили всю Россию, страны СНГ и даже Европу. Интересный факт, за лето ребята проезжают расстояние, сравнимое с длиной экватора.<br>Подробнее о нас ты можешь узнать в разделе «История СОП „Стрела“».</p>
+      </div>
+      <div class="sub">
+        <h3>Кто может стать проводником?</h3>
+        <p>Чтобы попасть к нам, ты должен быть:</p>
+        <ul class="p-list"><li><p>Совершеннолетним студентом (или стать им к июню)</p></li><li><p>гражданином России или Казахстана</p></li><li><p>Учащимся вуза/ссуза.</p></li></ul>
+        <p>Если ты сейчас не обучаешься, то напиши людям, указанным в контактах группы, возможно, они найдут решение :)</p>
+      </div>
+      <div class="sub">
+        <h3>Что тебе предстоит делать как проводнику?</h3>
+        <p>— Встречаешь пассажиров с улыбкой, помогаешь с багажом и проверяешь билеты.<br>— Предупреждаешь о приближении к станции назначения.<br>— Следишь за чистотой вагона, электрооборудованием, температурным режимом, выдаешь постельное белье и продаешь чайную продукцию. <br>— Решаешь вопросы и проблемы, которые могут возникнуть.<br>— Наслаждаешься романтикой железной дороги.<br>— Посещаешь и исследуешь новые города.<br>Например, в прошлом году наши бойцы посетили Сухум (Абхазия), Смоленск, Кисловодск, Москву, Ейск, Мурманск, Анапу.</p>
+      </div>
+      <div class="sub">
+        <h3>А что еще?</h3>
+        <p>Помимо работы проводником, ты получишь яркую студенческую жизнь, полную новых знакомств, шанс проявить себя в творческих и интеллектуальных проектах и возможность поучаствовать в развлекательных и душевных мероприятиях.</p>
+      </div>
+      <div class="sub">
+        <h3>Почему стоит пойти к нам?</h3>
+        <p>— Путешествия по стране и незабываемые впечатления<br>— Множество новых знакомств и друзей.<br>— Стабильная зарплата: от 120 тыс. рублей за лето с выплатами два раза в месяц.<br>— Официальное трудоустройство в ОАО «РЖД».<br>— Бесплатное обучение.</p>
+      </div>
+      <div class="sub">
+        <h3>Наши ценности и принципы:</h3>
+        <p>Мы стремимся сделать твое трудовое лето не только наполненным работой, но и насытить его всеми эмоциями, помочь преодолеть трудности, с которыми ты столкнешься на, возможно, первой работе в твоей жизни. <br>Мы хотим превратить твое лето в незабываемое приключение, о котором точно захочется рассказать.</p>
+      </div>
+      <div class="sub">
+        <h3>Как стать частью нашего отряда?</h3>
+        <p>Подробная информация доступна в разделе «Как к нам попасть?».</p>
+        <a class="btn" href="#how">ТЫК</a>
+      </div>
+    </div>
+    <div class="collage">
+      <img loading="lazy" alt="" style="--t:21px;--l:0px;--w:328px" width="1280" height="961" src="https://static.tildacdn.pub/tild3766-3135-4466-b139-353932323932/5231091741157874516.jpg">
+      <img loading="lazy" alt="" style="--t:78px;--l:340px;--w:200px" width="853" height="1280" src="https://static.tildacdn.pub/tild3535-6361-4363-b462-353761393163/5280543195740102974.jpg">
+      <img loading="lazy" alt="" style="--t:295px;--l:0px;--w:309px" width="800" height="600" src="https://static.tildacdn.pub/tild6436-3337-4134-b966-373336623935/71efd9c2-e8df-4267-b.jpg">
+      <img loading="lazy" alt="" style="--t:404px;--l:323px;--w:218px" width="1680" height="2237" src="https://static.tildacdn.pub/tild3034-6339-4366-a530-313138383130/_1020811.jpg">
+      <img loading="lazy" alt="" style="--t:552px;--l:0px;--w:296px" width="800" height="600" src="https://static.tildacdn.pub/tild3931-3032-4139-b865-303437643832/3563bf1c-b28d-44af-8.jpg">
+      <img loading="lazy" alt="" style="--t:721px;--l:303px;--w:238px" width="960" height="1280" src="https://static.tildacdn.pub/tild3037-3636-4131-a562-303665323438/photo_52492142139294.jpg">
+      <img loading="lazy" alt="" style="--t:803px;--l:0px;--w:281px" width="1680" height="1680" src="https://static.tildacdn.pub/tild3565-6562-4331-b136-636163313938/DSC_5861.jpg">
+      <img loading="lazy" alt="" style="--t:1080px;--l:300px;--w:240px" width="961" height="1280" src="https://static.tildacdn.pub/tild3738-6531-4362-b830-333264326232/5231091741157874679.jpg">
+      <img loading="lazy" alt="" style="--t:1105px;--l:0px;--w:251px" width="1680" height="2240" src="https://static.tildacdn.pub/tild3738-6439-4365-b462-336164306361/IMG_20210707_034607.jpg">
+      <img loading="lazy" alt="" style="--t:1441px;--l:307px;--w:234px" width="960" height="1280" src="https://static.tildacdn.pub/tild3532-3533-4736-b932-626230343834/photo_52492142139294.jpg">
+      <img loading="lazy" alt="" style="--t:1478px;--l:0px;--w:298px" width="1680" height="1261" src="https://static.tildacdn.pub/tild3232-3535-4538-a130-306537343162/_1020746.jpg">
+      <img loading="lazy" alt="" style="--t:1743px;--l:0px;--w:279px" width="1280" height="960" src="https://static.tildacdn.pub/tild6638-3863-4530-a334-343335313966/photo_54223871235054.jpg">
+      <img loading="lazy" alt="" style="--t:1797px;--l:289px;--w:253px" width="601" height="800" src="https://static.tildacdn.pub/tild3164-6234-4136-a436-383966666265/8b5bc040-55f9-47ba-a.jpg">
+      <img loading="lazy" alt="" style="--t:2014px;--l:0px;--w:282px" width="800" height="601" src="https://static.tildacdn.pub/tild3136-3836-4763-b363-313665373065/058ba602-4c81-48b3-b.jpg">
+      <img loading="lazy" alt="" style="--t:2158px;--l:300px;--w:241px" width="853" height="1280" src="https://static.tildacdn.pub/tild6633-3032-4533-b034-373336353534/5323480847086642158.jpg">
+      <img loading="lazy" alt="" style="--t:2264px;--l:0px;--w:289px" width="1680" height="1261" src="https://static.tildacdn.pub/tild6263-3136-4432-a666-383864656365/_1020899.jpg">
+      <img loading="lazy" alt="" style="--t:2527px;--l:0px;--w:412px" width="1280" height="722" src="https://static.tildacdn.pub/tild3461-6432-4339-b236-306663663565/5231091741157874394.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- Зачем нужен отряд? -->
+<section class="why" id="why">
+  <div class="wrap why-grid">
+    <div class="why-left">
+      <div class="strip">
+        <div class="film"></div>
+        <img loading="lazy" alt="" style="--t:73px;--l:226px" src="https://static.tildacdn.pub/tild3030-3331-4465-b765-306437653538/L6YjzJ_JEbk.jpg">
+        <img loading="lazy" alt="" style="--t:375px;--l:171px" src="https://static.tildacdn.pub/tild3430-3531-4264-b832-633031623139/txJjEjgFB2A.jpg">
+        <img loading="lazy" alt="" style="--t:680px;--l:116px" src="https://static.tildacdn.pub/tild6631-3264-4465-a138-666266383665/IMG_20241119_182212_.jpg">
+        <img loading="lazy" alt="" style="--t:985px;--l:63px" src="https://static.tildacdn.pub/tild6331-3837-4536-b264-646161396331/IMG_20210529_102410.jpg">
+      </div>
+      <div class="slider" id="slider" aria-roledescription="карусель" aria-label="Фото отряда">
+        <div class="track">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild6466-3737-4038-a366-623662633262/IMG_20241119_182236_.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild3561-3337-4565-a633-393932636166/1dO-r8rep9w.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild3866-3263-4338-b634-393362343361/5260251618455183879.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild3237-3266-4536-a263-363533636331/5359362159223627765.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild6564-3661-4164-b331-383738633965/5231091741157874710.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild6661-6639-4063-b238-346339363863/_1020806.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild6365-3231-4439-b038-336265373964/4d01fa27-1f69-4a73-a.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild6662-3864-4837-a231-303033303432/IMG_20241119_182213_.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild6562-6337-4064-b438-636637303430/3563bf1c-b28d-44af-8.jpg">
+          <img loading="lazy" alt="" src="https://static.tildacdn.pub/tild6237-3735-4166-a134-343231643537/JPVkgYz7ZO8.jpg">
+        </div>
+        <button class="arr prev" type="button" aria-label="Предыдущее фото"><svg viewBox="0 0 8 14"><path d="M7 1 1 7l6 6" fill="none" stroke="#000" stroke-width="1.5"/></svg></button>
+        <button class="arr next" type="button" aria-label="Следующее фото"><svg viewBox="0 0 8 14"><path d="m1 1 6 6-6 6" fill="none" stroke="#000" stroke-width="1.5"/></svg></button>
+      </div>
+    </div>
+    <div class="why-right">
+      <div class="why-head">
+        <h2 class="reveal from-left" style="--dl:.2s">Зачем нужен отряд?</h2>
+        <p class="lead reveal from-left" style="--dl:.4s">Почему стоит отправиться в незабываемое путешествие с СОП «Стрела»?</p>
+      </div>
+      <div class="why-body">
+        <div class="blk b1">
+          <h3 class="reveal from-left" style="--dl:.5s">Интересная работа и достойная зарплата:</h3>
+          <p class="reveal from-up" style="--dl:.6s">Это даже не просто работа, это возможность окунуться в мир приключений, где каждый день — новая история. <br><br>Проводник — не просто профессия, это магия, которая превращает тебя в мастера на все руки: немного электрика, сантехника, кочегара, уборщика, повара, швеи, бухгалтера, специалиста по маркетингу, психолога, детектива и много кого еще. <br><br>Пассажиры — твои зрители, а ты — главный герой их путешествия. И каждый рейс они будут говорить тебе теплые слова, делиться улыбками и пожеланиями счастливого пути. Это несомненно веселее, чем провести все лето в городе!<br><br>Ну, конечно, зарплата от 120 тысяч рублей за сезон — очень приятный бонус.</p>
+        </div>
+        <div class="blk b2">
+          <h3 class="reveal from-left">Дружба, которая остается навсегда:</h3>
+          <p class="reveal from-up" style="--dl:.6s">Вместе со «Стрелой» ты обретешь не просто коллег, а настоящих друзей. Многие ребята, прошедшие этот путь, говорят, что работа оказалась не такой сложной, как ожидали. <br><br>Зато наполненной чаем, вкусняшками и бесконечными разговорами, которые сближают сердца.<br><br>Люди, познакомившиеся в отряде, становятся друзьями на всю жизнь. Ты обретешь свою команду, свой дом, куда ты можешь всегда прийти и где тебя ждут!</p>
+        </div>
+        <div class="blk b3">
+          <h3 class="reveal from-left" style="--dl:.5s">Бесконечные путешествия:</h3>
+          <p class="reveal from-up" style="--dl:.6s">Со «Стрелой» ты не просто проведешь лето, ты создашь воспоминания, которые будут греть тебя долгие годы. <br><br>Горячее сухумское солнце, сочные персики, шикарные виды на море и горы, красивые города, щедрые пассажиры, угощающие арбузами, уютные вечера — все это станет частью тебя.</p>
+        </div>
+        <div class="blk b4">
+          <h3 class="reveal from-left" style="--dl:.5s"><span class="grad">Личностный рост:</span></h3>
+          <p class="reveal from-up" style="--dl:.6s">Многие ребята говорят, что за сезон они обрели стержень, уверенность и закалку. И эти качества проявляются и после сезона, помогая в дальнейшей жизни.</p>
+        </div>
+        <div class="blk b5">
+          <h3 class="reveal from-left" style="--dl:.5s">Возможности, которые ты откроешь:</h3>
+          <p class="reveal from-up" style="--dl:.6s">После сезона «Стрелы» ты сможешь реализовать себя по-новому. Участвовать в крутых мероприятиях, раскрыть свой творческий потенциал, снять фильм, собрать музыкальную группу. А если захочешь — проявить свои лидерские качества и даже поруководить.<br><br><strong>Не упусти шанс стать частью чего-то большого, чего-то незабываемого! Присоединяйся к «Стреле» и отправляйся в путешествие, которое изменит твою жизнь!</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Меню появляется после прокрутки на 400px
+  var bar = document.getElementById('topbar');
+  function onScrollBar() { bar.classList.toggle('show', window.scrollY > 400); }
+
+  // Бегущая строка «Стрела / Путевка в лучшее лето»
+  var tk = document.getElementById('ticker'), html = '';
+  for (var i = 0; i < 16; i++) html += '<span class="a">Стрела</span><span class="b">Путевка в лучшее лето</span>';
+  tk.innerHTML = html;
+
+  // Движение больших слов при прокрутке (как пошаговая анимация в Тильде)
+  var bps = [1200, 960, 640, 480, 0];
+  var sbs = [].map.call(document.querySelectorAll('[data-sbs]'), function (el) {
+    return { el: el, cfg: JSON.parse(el.getAttribute('data-sbs')), top: 0 };
+  });
+  function measure() {
+    sbs.forEach(function (it) {
+      it.el.style.transform = '';
+      it.top = it.el.getBoundingClientRect().top + window.scrollY;
+    });
+    update();
+  }
+  function update() {
+    if (reduce) return;
+    var w = window.innerWidth, bp = bps.filter(function (b) { return w >= b; })[0];
+    sbs.forEach(function (it) {
+      var c = it.cfg[bp]; if (!c) return;
+      var start = Math.max(0, it.top - window.innerHeight + c[4]);
+      var p = Math.min(1, Math.max(0, (window.scrollY - start) / c[3]));
+      it.el.style.transform = 'translate(' + (c[0] * p) + 'px,' + (c[1] * p) + 'px) scale(' + (1 + (c[2] - 1) * p) + ')';
+    });
+  }
+
+  // Плавное появление заголовков и текстов
+  var rv = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -60px 0px' });
+    rv.forEach(function (el) { io.observe(el); });
+  } else {
+    rv.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Слайдер: листается сам каждые 3 секунды, по кругу
+  var sl = document.getElementById('slider'), track = sl.querySelector('.track');
+  var n = track.children.length, idx = 0, timer;
+  function go(k) { idx = (k + n) % n; track.style.transform = 'translateX(' + (-100 * idx) + '%)'; }
+  function auto() { clearInterval(timer); if (!reduce) timer = setInterval(function () { go(idx + 1); }, 3000); }
+  sl.querySelector('.prev').addEventListener('click', function () { go(idx - 1); auto(); });
+  sl.querySelector('.next').addEventListener('click', function () { go(idx + 1); auto(); });
+  auto();
+
+  window.addEventListener('scroll', function () { onScrollBar(); update(); }, { passive: true });
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+  onScrollBar(); measure();
+})();
+</script>
+</body>
+</html>
